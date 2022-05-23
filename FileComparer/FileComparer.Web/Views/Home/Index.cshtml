@@ -1,0 +1,143 @@
+﻿<div class="container mt-3">
+    <br />
+    <br>
+    <br />
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a id="basicTab" class="nav-link active" href="#basic">Basic</a>
+        </li>
+        <li class="nav-item" id="liRow">
+            <a id="rowTab" class="nav-link disabled" href="#rowCalculation">Row Settings</a>
+        </li>
+        <li class="nav-item" id="liRowWithSelectedCol">
+            <a id="rowWithSelectedColTab" class="nav-link disabled" href="#columnCalculation">Column Settings</a>
+        </li>
+        <li class="nav-item" id="liGroup">
+            <a id="groupTab" class="nav-link disabled" href="#groupCalculation">Group Settings</a>
+        </li>
+        <li class="nav-item" id="liDistribution">
+            <a id="distributionTab" class="nav-link disabled" href="#distributionCalculation">Distribution Settings</a>
+        </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div id="basic" class="container tab-pane active">
+            <br>
+            <br />
+            <div class="row">
+                <div class="col-12">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Standard File</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="standardFile" name="standardFile" accept=".xlsx,.xls" required>
+                            <label class="custom-file-label" for="standardFile">Choose Standard file</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-12">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Comparer File</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="comparerFile" name="comparerFile" accept=".xlsx,.xls" required>
+                            <label class="custom-file-label" for="comparerFile">Choose Comparer file</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-success float-right" id="upload">Upload</button>
+                </div>
+            </div>
+        </div>
+        <div id="rowCalculation" class="container tab-pane fade">
+            <br />
+            <br />
+            <select id="uniqueCol" class="selectpickerUnique" data-live-search="true" data-width="auto"
+                    multiple title="Select Unique Columns..." data-size="10"></select>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <div id="columnCalculation" class="container tab-pane fade">
+            <br />
+            <br />
+            <select id="selectedCol" class="selectpickerCol" data-live-search="true" data-width="auto"
+                    multiple title="Select Columns..." data-size="10"></select>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <div id="groupCalculation" class="container tab-pane fade">
+            <br />
+            <br />
+            <select id="groupCol" class="selectpickerGroup" data-live-search="true" data-width="auto"
+                    multiple title="Select Group Columns..." data-size="10"></select>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        <div id="distributionCalculation" class="container tab-pane fade">
+            <br />
+            <br />
+            <select id="distributionCol" class="selectpickerDistribution" data-live-search="true" data-width="auto"
+                    multiple title="Select Distribution Columns..." data-size="10"></select>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>
+    <br />
+    <div class="card" hidden id="card">
+        <div class="card-body">
+            <span>Configuration:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <label class="checkbox-inline">
+                <input type="checkbox" value="" id="checkColumns" checked required> Check Columns&nbsp;
+            </label>
+            <label class="checkbox-inline" id="checkRowsLabel">
+                <input type="checkbox" id="checkRows" value=""> Check Rows&nbsp;
+            </label>
+            <label class="checkbox-inline" id="checkRowsWithSelectedColumnLabel">
+                <input type="checkbox" id="checkRowsWithSelectedColumn" value=""> Check Rows with Selected Column&nbsp;
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="checkGroups" value=""> Check Groups&nbsp;
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" id="checkDistribution" value=""> Check Distribution&nbsp;
+            </label>
+            <button class="btn btn-primary" id="generate">Generate</button>
+        </div>
+    </div>
+</div>
